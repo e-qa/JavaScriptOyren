@@ -1,26 +1,39 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
-	title: string;
+  title: string;
 }
 
+import Aside from "../components/Aside.astro";
+import Content from "../components/Content.astro";
 const { title } = Astro.props;
-
-
-
-
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="JavaScript müsahibə suallarını və cavablarını sadə dərslərlə öyrənin, yeni başlayanlardan tutmuş irəli səviyyələrə qədər. Kodlaşdırma bacarıqlarınızı inkişaf etdirin və növbəti iş müsahibənizə hazırlaşın!" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="JavaScript müsahibə suallarını və cavablarını sadə dərslərlə öyrənin, yeni başlayanlardan tutmuş irəli səviyyələrə qədər. Kodlaşdırma bacarıqlarınızı inkişaf etdirin və növbəti iş müsahibənizə hazırlaşın!"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div>
+      <div class="sticky z-20 top-0 bg-[#222223]">
+        <Navbar />
+        <div class="divider h-1 divider-neutral m-0 p-0 bg-[#222223]"></div>
+      </div>
+
+      <slot />
+
+      <div class="divider h-1 divider-neutral m-0 p-0 bg-[#222223]"></div>
+      <div class="bg-[#222223] p-2"><Footer /></div>
+    </div>
+  </body>
 </html>

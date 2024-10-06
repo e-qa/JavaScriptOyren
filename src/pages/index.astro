@@ -1,7 +1,22 @@
 ---
+import Content from "../components/Content.astro";
+import Aside from "../components/Aside.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Javascript Oyren">
-  <h1>JavaScript Öyrən 🌟</h1>
+  <main class="flex">
+    <div
+      class="bg-[#222223] basis-1/5 text-white sticky top-20 pb-10 h-lvh overflow-y-auto"
+    >
+      <Aside />
+    </div>
+    <div
+      class="divider w-1 divider-neutral divider-horizontal m-0 p-0 bg-[#222223]"
+    >
+    </div>
+    <div class="basis-4/5 bg-[#1A1A1B] pt-4 pb-10 text-white">
+      <Content />
+    </div>
+  </main>
 </Layout>
