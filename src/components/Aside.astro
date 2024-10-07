@@ -9,7 +9,7 @@ const { pathname } = Astro.url;
       {
         posts.map((post: { url: string; frontmatter: { title: string } }) => (
           <li
-            class={`${pathname === post.url ? "bg-yellow-500" : ""} hover:bg-gray-200 duration-200`}
+            class={`${pathname === post.url ? "bg-[#fce100]" : ""} hover:bg-gray-200 duration-200`}
           >
             <a href={post.url} class="block p-2 text-white hover:text-black">
               {post.frontmatter.title}
