@@ -4,7 +4,7 @@ const { posts } = Astro.props;
 
 <div class="p-4">
   <aside>
-    <ul>
+    <ul class="list-none p-2">
       {
         posts.map((post: { url: string; frontmatter: { title: string } }) => (
           <li>

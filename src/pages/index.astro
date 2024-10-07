@@ -1,25 +1,5 @@
 ---
-import Content from "../components/Content.astro";
-import Aside from "../components/Aside.astro";
 import Layout from "../layouts/Layout.astro";
-
-const allPosts = await Astro.glob("../pages/blog/*.md");
-const { frontmatter } = Astro.props;
 ---
 
-<Layout title="Javascript Oyren">
-  <main class="flex">
-    <div
-      class="bg-[#222223] basis-1/5 text-white sticky top-20 pb-10 h-lvh overflow-y-auto"
-    >
-      <Aside posts={allPosts} />
-    </div>
-    <div
-      class="divider w-1 divider-neutral divider-horizontal m-0 p-0 bg-[#222223]"
-    >
-    </div>
-    <div class="basis-4/5 bg-[#1A1A1B] pt-4 pb-10 text-white">
-      <Content />
-    </div>
-  </main>
-</Layout>
+<Layout title="Javascript Oyren">JAVASCRIPT OYRENNNN...</Layout>

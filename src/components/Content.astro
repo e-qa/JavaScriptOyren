@@ -1,14 +1,42 @@
 ---
-const { content } = Astro.props;
+
 ---
 
 <div class="pl-10 pr-10 flex items-center justify-center h-full">
-  <div class="w-[1000px]">
-    <h1 class="text-2xl">
-      Bu blog, JavaScript proqramlaşdırma dilini öyrənmək istəyənlər üçün bir
-      qaynaqdır. JavaScript, veb inkişafında müasir texnologiyaların təməlini
-      təşkil edir. Dinamik və interaktiv veb saytlar yaratmaq üçün geniş
-      imkanlar təqdim edir.
-    </h1>
-  </div>
+  <div class="w-[1000px]"><slot /></div>
 </div>
+
+<style is:inline>
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 18px;
+    padding: 20px;
+  }
+  ul {
+    list-style-type: disc;
+    padding: 0px 0px 0px 40px;
+  }
+  pre {
+    border: 5px solid #222223;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+
+    code {
+      font-size: inherit;
+      padding: 0;
+    }
+  }
+
+  code {
+    background: #24292e;
+    font-size: 15px;
+    border-radius: 30px;
+    padding: 5px 10px;
+  }
+</style>

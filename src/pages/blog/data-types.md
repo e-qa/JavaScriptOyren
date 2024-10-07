@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogLayout.astro"
+layout: "../../layouts/Layout.astro"
 title: "Data tipləri"
 ---
 
@@ -42,7 +42,3 @@ console.log(sayHi); // Salam!
 Kodda göründüyü kimi, `string` **immutable** dəyərdir və dəyişdirilə bilmir.
 
 ### Memory stack nədir ?
-
-Source for help:
-https://www.youtube.com/watch?v=nCwQY8inRvU
-https://frontendjoy.substack.com/p/javascript-data-types-27-quick-questions
