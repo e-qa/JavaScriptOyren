@@ -4,7 +4,6 @@ import Aside from "../components/Aside.astro";
 import Layout from "../layouts/Layout.astro";
 
 const allPosts = await Astro.glob("../pages/blog/*.md");
-const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Javascript Oyren">
@@ -18,8 +17,10 @@ const { frontmatter } = Astro.props;
       class="divider w-1 divider-neutral divider-horizontal m-0 p-0 bg-[#222223]"
     >
     </div>
-    <div class="basis-4/5 bg-[#1A1A1B] pt-4 pb-10 text-white">
-      <Content />
+    <div class="basis-4/5 bg-[#1A1A1B] pt-4 pb-10 text-white text-xl">
+      <div class="pl-10 pr-10 flex items-center justify-center">
+        <div class="w-[1000px] prose"><slot /></div>
+      </div>
     </div>
   </main>
 </Layout>
