@@ -26,9 +26,9 @@ const allPosts = await Astro.glob("../pages/blog/*.md");
         <Navbar />
         <div class="divider h-1 divider-neutral m-0 p-0 bg-[#222223]"></div>
       </div>
-      <main class="flex">
+      <main class="flex flex-col lg:flex-row">
         <div
-          class="bg-[#222223] basis-1/5 text-white sticky top-20 pb-10 h-lvh overflow-y-auto"
+          class="bg-[#222223] lg:block hidden basis-1/5 text-white sticky top-20 pb-10 h-lvh overflow-y-auto"
         >
           <Aside posts={allPosts} />
         </div>
