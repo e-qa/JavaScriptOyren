@@ -1,6 +1,7 @@
 ---
 const { posts } = Astro.props;
 const { pathname } = Astro.url;
+let pathName = pathname.split("/")[2];
 ---
 
 <div class="p-4">
@@ -13,7 +14,7 @@ const { pathname } = Astro.url;
             frontmatter: { title: string; path: string };
           }) => (
             <li
-              class={`${pathname === post.frontmatter.path ? "bg-[#fce100]" : ""} hover:bg-gray-200 duration-200`}
+              class={`${pathName === post.frontmatter.path ? "bg-[#fce100]" : ""} hover:bg-gray-200 duration-200`}
             >
               <a href={post.url} class="block p-2 text-white hover:text-black">
                 {post.frontmatter.title}
