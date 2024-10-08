@@ -7,15 +7,20 @@ const { pathname } = Astro.url;
   <aside>
     <ul class="list-none p-2">
       {
-        posts.map((post: { url: string; frontmatter: { title: string } }) => (
-          <li
-            class={`${pathname === post.url ? "bg-[#fce100]" : ""} hover:bg-gray-200 duration-200`}
-          >
-            <a href={post.url} class="block p-2 text-white hover:text-black">
-              {post.frontmatter.title}
-            </a>
-          </li>
-        ))
+        posts.map(
+          (post: {
+            url: string;
+            frontmatter: { title: string; path: string };
+          }) => (
+            <li
+              class={`${pathname === post.frontmatter.path ? "bg-[#fce100]" : ""} hover:bg-gray-200 duration-200`}
+            >
+              <a href={post.url} class="block p-2 text-white hover:text-black">
+                {post.frontmatter.title}
+              </a>
+            </li>
+          ),
+        )
       }
     </ul>
   </aside>

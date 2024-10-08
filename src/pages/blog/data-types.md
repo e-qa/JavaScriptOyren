@@ -1,6 +1,7 @@
 ---
 layout: "../../layouts/Layout.astro"
 title: "Data tipləri"
+path: "/blog/data-types"
 ---
 
 # Data Tipləri-Data Types
