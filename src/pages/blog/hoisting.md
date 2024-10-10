@@ -30,7 +30,7 @@ sayHi = "Hello";
 
 Yaradılış (creation) mərhələsində, JavaScript mühərriki dəyişəni (variable) yaddaşa yerləşdirir `undefined` dəyərini verir.
 
-### `let` ilə hoisting
+### Let ilə hoisting
 
 İndi isə həmin kodu `let` açar sözü ilə yazaq:
 
