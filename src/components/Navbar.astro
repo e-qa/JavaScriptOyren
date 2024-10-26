@@ -6,4 +6,16 @@
   <a href="/" class="btn btn-ghost text-xl text-white capitalize"
     >JavaScript öyrən 🚀</a
   >
+  <button id="openMenu" class="btn lg:hidden flex">🍔</button>
 </nav>
+
+<script>
+  import { isOpen } from "../store.js";
+  console.log();
+
+  function openMenu() {
+    isOpen.set(!isOpen.value);
+  }
+
+  document.getElementById("openMenu")!.addEventListener("click", openMenu);
+</script>

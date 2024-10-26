@@ -28,7 +28,8 @@ const allPosts = await Astro.glob("../pages/blog/*.md");
       </div>
       <main class="flex flex-col lg:flex-row">
         <div
-          class="bg-[#222223] lg:block basis-1/5 text-white sticky top-20 pb-10 h-lvh overflow-y-auto"
+          id="posts"
+          class="bg-[#222223] lg:block hidden basis-1/5 text-white sticky top-20 pb-10 h-lvh overflow-y-auto"
         >
           <Aside posts={allPosts} />
         </div>
@@ -48,3 +49,19 @@ const allPosts = await Astro.glob("../pages/blog/*.md");
     </div>
   </body>
 </html>
+
+<script>
+  import { isOpen } from "../store.js";
+
+  isOpen.subscribe((open) => {
+    const postElement = document.getElementById("posts");
+
+    if (open) {
+      postElement!.classList.add("flex");
+      postElement!.classList.remove("hidden");
+    } else {
+      postElement!.classList.add("hidden");
+      postElement!.classList.remove("flex");
+    }
+  });
+</script>
