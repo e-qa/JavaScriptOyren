@@ -10,7 +10,7 @@
 
 - [x] spread və rest
 
-- [ ] deep copy və shallow copy
+- [x] deep copy və shallow copy
 
 - [ ] promise
 
